@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Khh Works — independent app development. The official developer website.">
+    <meta name="theme-color" content="#f4f2eb">
+    <title>Khh Works — Independent App Development</title>
+    <style>
+      :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color: #242822; background: #f4f2eb; -webkit-font-smoothing: antialiased; }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      .page { max-width: 1200px; min-height: 100svh; margin: auto; padding: 32px 48px 24px; display: flex; flex-direction: column; }
+      header, footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      header { padding-bottom: 28px; border-bottom: 1px solid #cccfc4; }
+      .wordmark { font-size: 22px; font-weight: 650; letter-spacing: -.04em; }
+      .label { font-size: 11px; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; }
+      .developer { display: flex; align-items: center; gap: 10px; }
+      .dot { width: 7px; height: 7px; border-radius: 50%; background: #586449; flex-shrink: 0; }
+      main { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 96px 0 112px; }
+      .eyebrow { margin: 0 0 28px; color: #586449; display: flex; align-items: center; gap: 14px; }
+      .eyebrow::before { content: ""; height: 1px; width: 32px; background: #7b856e; }
+      h1 { margin: 0 0 20px -.045em; font-size: clamp(56px, 8vw, 104px); font-weight: 600; letter-spacing: -.065em; line-height: 1.12; }
+      h2 { font-size: clamp(22px, 2.7vw, 32px); line-height: 1.35; font-weight: 400; letter-spacing: -.025em; margin: 0 0 18px; max-width: 600px; }
+      .intro { max-width: 440px; margin: 0; font-size: 16px; line-height: 1.8; color: #596052; }
+      .profile { display: inline-flex; align-items: center; gap: 32px; margin-top: 36px; padding: 15px 22px; border: 1px solid #303c30; border-radius: 5px; text-decoration: none; font-size: 14px; font-weight: 500; color: #fff; background: #303c30; }
+      .profile:hover { background: #445240; }
+      a:focus-visible { outline: 3px solid #586449; outline-offset: 5px; }
+      footer { border-top: 1px solid #cccfc4; padding-top: 22px; font-size: 12px; line-height: 1.6; color: #596052; }
+      footer p { margin: 0; }
+      @media (max-width: 480px) {
+        .page { padding: 24px 24px 20px; }
+        header { gap: 12px; padding-bottom: 22px; }
+        .label { font-size: 10px; letter-spacing: .08em; }
+        .developer { font-size: 10px; letter-spacing: 0; text-transform: none; gap: 7px; }
+        .wordmark { font-size: 20px; }
+        main { padding: 76px 0; }
+        footer { align-items: flex-start; flex-direction: column; gap: 4px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <span class="wordmark" aria-hidden="true">Khh Works<span style="color: #586449">.</span></span>
+        <span class="developer label"><span class="dot" aria-hidden="true"></span>Independent developer</span>
+      </header>
+      <main>
+        <p class="eyebrow label">An independent perspective</p>
+        <h1>Khh Works</h1>
+        <h2>apps dev</h2>
+        <p class="intro">creative ideas coming to life</p>
+        <a class="profile" href="https://github.com/khhworks">Find us on GitHub <span aria-hidden="true">↗</span></a>
+      </main>
+      <footer>
+        <p>© Khh Works</p>
+        <p>Official developer website</p>
+      </footer>
+    </div>
+  </body>
+</html>

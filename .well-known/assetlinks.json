@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.spotquest.game",
+      "sha256_cert_fingerprints": [
+        "B6:F6:24:55:A2:11:5C:F2:03:AB:0A:FF:86:29:6D:F2:34:B4:F3:F2:A9:80:C3:B0:66:25:3C:38:7C:62:2F:EC"
+      ]
+    }
+  }
+]

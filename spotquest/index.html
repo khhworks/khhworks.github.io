@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet SpotQuest by Khh Works. Explore beautiful scenes, spot the differences, race the clock and earn achievement badges in a puzzle adventure for Android.">
+  <meta name="theme-color" content="#f4f2eb">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SpotQuest | Khh Works">
+  <meta property="og:description" content="A sharp eye. A new adventure. Discover SpotQuest, a spot-the-difference game by Khh Works.">
+  <meta property="og:url" content="https://khhworks.github.io/spotquest/">
+  <meta property="og:image" content="https://khhworks.github.io/spotquest/assets/banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://khhworks.github.io/spotquest/">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <title>SpotQuest | Khh Works</title>
+  <style>
+    :root { color-scheme: light; --paper:#f4f2eb; --ink:#242822; --muted:#596052; --line:#cccfc4; --olive:#586449; --deep:#071c25; --mint:#61f2b4; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; color:var(--ink); background:var(--paper); -webkit-font-smoothing:antialiased; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:24px; }
+    body { margin:0; }
+    img { display:block; max-width:100%; height:auto; }
+    a { color:inherit; text-underline-offset:4px; }
+    a:focus-visible,summary:focus-visible { outline:3px solid var(--olive); outline-offset:6px; }
+    a:hover { text-decoration-thickness:2px; }
+    .wrap { max-width:1200px; margin:auto; padding:0 48px; }
+    .skip { position:absolute; top:12px; left:12px; padding:12px; background:var(--paper); transform:translateY(-200%); z-index:5; }
+    .skip:focus { transform:translateY(0); }
+    .header { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:30px 0 26px; border-bottom:1px solid var(--line); }
+    .wordmark { font-size:22px; font-weight:650; letter-spacing:-.04em; text-decoration:none; }
+    .wordmark span { color:var(--olive); }
+    .back { font-size:13px; color:var(--muted); }
+    .label { font-size:11px; letter-spacing:.15em; text-transform:uppercase; font-weight:650; }
+    .intro { display:grid; grid-template-columns:1.05fr 1fr; gap:56px; align-items:end; padding:68px 0 44px; }
+    .eyebrow { display:flex; align-items:center; gap:12px; color:var(--olive); margin:0 0 24px; }
+    .eyebrow::before { content:""; height:1px; width:30px; background:var(--olive); }
+    h1 { font-size:clamp(56px,7.5vw,94px); line-height:1; font-weight:650; letter-spacing:-.065em; margin:0 0 22px -.045em; }
+    .tagline { font-family:Georgia,"Times New Roman",serif; font-size:clamp(25px,3vw,34px); font-weight:400; line-height:1.25; margin:0; }
+    .lede { color:var(--muted); font-size:17px; line-height:1.8; margin:0 0 22px; max-width:470px; }
+    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:22px; }
+    .button { display:inline-flex; justify-content:center; align-items:center; gap:26px; padding:15px 22px; border:1px solid #303c30; border-radius:5px; background:#303c30; color:white; font-size:14px; font-weight:550; text-decoration:none; }
+    .button:hover { background:#445240; }
+    .text-link { font-size:14px; }
+    .hero { margin:0; overflow:hidden; border-radius:8px; background:var(--deep); animation:arrive .8s ease-out both; }
+    .hero img { width:100%; aspect-ratio:2/1; object-fit:cover; }
+    .ribbon { display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 28px; border-bottom:1px solid var(--line); padding:23px 0; color:var(--muted); }
+    .ribbon span { display:flex; align-items:center; gap:10px; }
+    .ribbon span::before { content:""; width:5px; height:5px; border-radius:50%; background:var(--olive); }
+    section { padding:70px 0; }
+    h2 { font-size:clamp(30px,4vw,46px); line-height:1.13; letter-spacing:-.04em; font-weight:550; margin:0 0 22px; }
+    .section-top { display:flex; justify-content:space-between; align-items:end; gap:36px; margin-bottom:36px; }
+    .section-top h2 { margin-bottom:0; }
+    .section-top>p { color:var(--muted); font-size:15px; line-height:1.7; max-width:300px; margin:0; }
+    .section-label { color:var(--olive); margin:0 0 18px; }
+    .features { display:grid; grid-template-columns:repeat(3,1fr); gap:34px; }
+    .feature { border-top:1px solid var(--line); padding-top:22px; }
+    .feature .number { font-family:Georgia,"Times New Roman",serif; font-style:italic; color:var(--olive); font-size:25px; }
+    h3 { font-size:22px; letter-spacing:-.025em; font-weight:600; margin:18px 0 12px; }
+    .feature p { color:var(--muted); font-size:15px; line-height:1.85; margin:0; }
+    .gallery { border-top:1px solid var(--line); }
+    .screens { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; }
+    .screen { margin:0; min-width:0; }
+    .screen-link { display:block; padding:10px; border:1px solid #bec3b7; border-radius:24px; background:#e4e5dc; }
+    .screen img { width:100%; aspect-ratio:9/16; object-fit:contain; background:#032331; border-radius:15px; }
+    figcaption { padding:20px 2px 0; }
+    figcaption strong { display:block; font-size:17px; font-weight:600; margin-bottom:8px; letter-spacing:-.02em; }
+    figcaption span { display:block; font-size:14px; line-height:1.7; color:var(--muted); }
+    .play { border-radius:8px; background:radial-gradient(ellipse at 100% 0%,#154f47 0%,transparent 65%),var(--deep); color:#f0f5ef; padding:48px; }
+    .play .section-label { color:var(--mint); }
+    .play h2 { max-width:560px; }
+    .modes { display:grid; grid-template-columns:1fr 1fr; gap:44px; margin-top:36px; }
+    .mode { border-top:1px solid #3d5a5d; padding-top:8px; }
+    .mode h3 { color:var(--mint); }
+    .mode p { color:#c0d0cd; font-size:15px; line-height:1.85; margin:0; }
+    .faqs { display:grid; grid-template-columns:.8fr 1.2fr; gap:56px; }
+    details { padding:19px 0; border-bottom:1px solid var(--line); }
+    details:first-child { border-top:1px solid var(--line); }
+    summary { cursor:pointer; font-weight:550; font-size:16px; line-height:1.6; padding-right:12px; }
+    details p { color:var(--muted); font-size:15px; line-height:1.8; margin:16px 0 0; }
+    .support { display:flex; align-items:center; justify-content:space-between; gap:30px; border-top:1px solid var(--line); padding:38px 0; }
+    .support h2 { font-size:27px; margin:0 0 9px; }
+    .support p { color:var(--muted); margin:0; line-height:1.7; font-size:14px; }
+    footer { display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; border-top:1px solid var(--line); padding:24px 0 30px; font-size:12px; line-height:1.7; color:var(--muted); }
+    footer p { margin:0; }
+    footer nav { display:flex; gap:24px; flex-wrap:wrap; }
+    @keyframes arrive { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    @media(max-width:800px) {
+      .wrap { padding:0 28px; }
+      .intro { gap:30px; }
+      .lede { font-size:15px; }
+      .features { gap:22px; }
+      .screens { gap:18px; }
+      .screen-link { padding:6px; border-radius:18px; }
+      .screen img { border-radius:12px; }
+      .faqs { gap:30px; }
+    }
+    @media(max-width:600px) {
+      .wrap { padding:0 22px; }
+      .header { padding:24px 0 22px; }
+      .wordmark { font-size:20px; }
+      .intro { grid-template-columns:1fr; padding:44px 0 30px; gap:24px; }
+      .eyebrow { margin-bottom:20px; }
+      .lede { font-size:16px; }
+      .ribbon { justify-content:flex-start; gap:14px 22px; font-size:10px; }
+      section { padding:48px 0; }
+      .section-top { display:block; margin-bottom:28px; }
+      .section-top>p { margin-top:16px; max-width:none; }
+      .features { grid-template-columns:1fr; gap:28px; }
+      .feature h3 { margin-top:10px; }
+      .screens { grid-template-columns:1fr; gap:34px; max-width:330px; margin:auto; }
+      .screen-link { padding:9px; border-radius:24px; }
+      .screen img { border-radius:16px; }
+      .play { padding:30px 24px; }
+      .modes { grid-template-columns:1fr; gap:24px; margin-top:24px; }
+      .faqs { grid-template-columns:1fr; gap:4px; }
+      .support { flex-direction:column; align-items:flex-start; gap:22px; }
+      footer { flex-direction:column; gap:16px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .hero { animation:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="header">
+      <a class="wordmark" href="../" aria-label="Khh Works homepage">Khh Works<span>.</span></a>
+      <a class="back" href="../">Back to Khh Works &nearr;</a>
+    </header>
+    <main id="main">
+      <div class="intro">
+        <div>
+          <p class="eyebrow label">A game by Khh Works</p>
+          <h1>SpotQuest</h1>
+          <p class="tagline">A sharp eye.<br>A new adventure.</p>
+        </div>
+        <div>
+          <p class="lede">Look closer. Explore richly detailed scenes, spot what changed and beat the clock. An adventure for curious minds who notice what everyone else missed.</p>
+          <div class="actions">
+            <a class="button" href="#inside">Explore the game <span aria-hidden="true">&darr;</span></a>
+            <a class="text-link" href="#how-to-play">How to play</a>
+          </div>
+        </div>
+      </div>
+      <figure class="hero">
+        <img src="assets/banner.png" width="1200" height="600" fetchpriority="high" alt="SpotQuest eagle with a magnifying glass beside two versions of a sunlit island sanctuary. Look closer. Find what everyone else missed.">
+      </figure>
+      <div class="ribbon label" aria-label="Game highlights">
+        <span>Spot the differences</span><span>Android</span><span>Made for the Solana dApp Store</span>
+      </div>
+      <section id="how-to-play" aria-labelledby="challenge-title">
+        <div class="section-top">
+          <div><p class="section-label label">The challenge</p><h2>Small details.<br>Big discoveries.</h2></div>
+          <p>Take a closer look. Every scene is a new chance to put your observation skills to the test.</p>
+        </div>
+        <div class="features">
+          <article class="feature"><span class="number" aria-hidden="true">01</span><h3>Spot what changed.</h3><p>Compare the images and tap the differences before time runs out. Earn stars, unlock new scenes and keep your adventure moving.</p></article>
+          <article class="feature"><span class="number" aria-hidden="true">02</span><h3>Make your next move.</h3><p>Manage your energy, use hints when you need a helping hand and spend your in-game coins in the Hunt Shop. Keep returning for daily rewards.</p></article>
+          <article class="feature"><span class="number" aria-hidden="true">03</span><h3>Rise to the challenge.</h3><p>Complete the regular adventure to unlock boss challenges. Push your observation skills further, with Eagle Strikes available to help during boss attempts.</p></article>
+        </div>
+      </section>
+      <section class="gallery" id="inside" aria-labelledby="inside-title">
+        <div class="section-top">
+          <div><p class="section-label label">Inside SpotQuest</p><h2>A closer look.</h2></div>
+          <p>Scenes to explore, tools to help and milestones to work towards. Select a screenshot to view it in full.</p>
+        </div>
+        <div class="screens">
+          <figure class="screen"><a class="screen-link" href="assets/scenes.jpg" aria-label="View the level selection screenshot"><img src="assets/scenes.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="SpotQuest level selection showing Terrace Secrets and a locked Beachside Sips scene."></a><figcaption><strong>A world worth noticing.</strong><span>Discover detailed places as you progress through the adventure.</span></figcaption></figure>
+          <figure class="screen"><a class="screen-link" href="assets/shop.png" aria-label="View the Hunt Shop screenshot"><img src="assets/shop.png" width="720" height="1280" loading="lazy" decoding="async" alt="The Hunt Shop with energy refills, hints and Eagle Strike support."></a><figcaption><strong>A little help along the way.</strong><span>Put your in-game coins towards energy, hints and boss support.</span></figcaption></figure>
+          <figure class="screen"><a class="screen-link" href="assets/mastery.jpg" aria-label="View the Mastery Collection screenshot"><img src="assets/mastery.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="The Mastery Collection with locked achievement badges and progress towards their requirements."></a><figcaption><strong>Give every victory meaning.</strong><span>Pursue milestones in exploration, dedication and mastery.</span></figcaption></figure>
+        </div>
+      </section>
+      <section class="play" aria-labelledby="play-title">
+        <p class="section-label label">Your way to play</p>
+        <h2>Start exploring.<br>Make the adventure yours.</h2>
+        <div class="modes">
+          <article class="mode"><h3>Play as a guest.</h3><p>Jump into the adventure with a local guest profile. Included and previously downloaded scenes work offline. Connect to the internet when you want to download new scenes.</p></article>
+          <article class="mode"><h3>Connect your wallet.</h3><p>Use a compatible Solana wallet to play with a separate local profile. Earn the Sovereign boss badges by clearing boss challenges in wallet mode.</p></article>
+        </div>
+      </section>
+      <section class="faqs" aria-labelledby="faq-title">
+        <div><p class="section-label label">Before you begin</p><h2>A few useful details.</h2></div>
+        <div>
+          <details><summary>Do I need a wallet to play?</summary><p>No. Guest mode lets you play without connecting a wallet. Some achievements, including the Sovereign boss badges, are exclusive to wallet mode.</p></details>
+          <details><summary>Can I play offline?</summary><p>Included and downloaded scenes can be played offline. New scene downloads and wallet connection need internet access.</p></details>
+          <details><summary>Where is my progress saved?</summary><p>Progress is saved on your phone. Guest and wallet profiles have separate progress. Clearing the game's storage or deleting and reinstalling it can erase that progress. Connecting a wallet does not provide a cloud backup.</p></details>
+          <details><summary>What are the achievement badges?</summary><p>Badges mark achievements in the game, from mastery milestones to boss victories. This release awards in-game badges and does not offer NFT minting.</p></details>
+          <details><summary>Where can I get help?</summary><p>Email <a href="mailto:anthony.khh5@gmail.com">anthony.khh5@gmail.com</a> with your device model, app version and a description of the issue.</p></details>
+        </div>
+      </section>
+      <div class="support">
+        <div><h2>Every detail matters.</h2><p>Questions, feedback or a discovery to share? Get in touch.</p></div>
+        <a class="button" href="mailto:anthony.khh5@gmail.com">Contact support <span aria-hidden="true">&nearr;</span></a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; Khh Works. SpotQuest.</p>
+      <nav aria-label="Footer"><a href="../">Khh Works</a><a href="https://spotquestsolana.netlify.app/terms.html">Terms of Use</a><a href="https://spotquestsolana.netlify.app/privacy.html">Privacy Policy</a><a href="mailto:anthony.khh5@gmail.com">Support</a></nav>
+    </footer>
+  </div>
+</body>
+</html>

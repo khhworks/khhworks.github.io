@@ -1,0 +1,53 @@
+{
+  "name": "Seeker Architect",
+  "description": "Conquered the precision workshop of open mobile. A SpotQuest achievement for clearing Seeker Foundry in a wallet-connected profile, part of The Sovereign Five. An independent SpotQuest game achievement, not issued or endorsed by Solana Foundation or Solana Mobile. This collectible is not SOL or SKR currency.",
+  "image": "https://khhworks.github.io/spotquest/nft/sovereign-five-v1/images/seeker-architect.png",
+  "category": "image",
+  "attributes": [
+    {
+      "trait_type": "Game",
+      "value": "SpotQuest"
+    },
+    {
+      "trait_type": "Series",
+      "value": "The Sovereign Five"
+    },
+    {
+      "trait_type": "Boss",
+      "value": "Seeker Foundry"
+    },
+    {
+      "trait_type": "Boss ID",
+      "value": "boss-seeker-foundry"
+    },
+    {
+      "trait_type": "Achievement ID",
+      "value": "achievement-seeker-foundry"
+    },
+    {
+      "trait_type": "Difficulty",
+      "value": "Boss"
+    },
+    {
+      "trait_type": "Theme",
+      "value": "Seeker and open mobile engineering"
+    },
+    {
+      "trait_type": "Hint Policy",
+      "value": "No hints"
+    },
+    {
+      "trait_type": "Artwork Version",
+      "value": "1"
+    }
+  ],
+  "properties": {
+    "category": "image",
+    "files": [
+      {
+        "uri": "https://khhworks.github.io/spotquest/nft/sovereign-five-v1/images/seeker-architect.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

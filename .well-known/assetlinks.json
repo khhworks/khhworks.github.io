@@ -10,5 +10,17 @@
         "B6:F6:24:55:A2:11:5C:F2:03:AB:0A:FF:86:29:6D:F2:34:B4:F3:F2:A9:80:C3:B0:66:25:3C:38:7C:62:2F:EC"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.spotquest.game.nfttest",
+      "sha256_cert_fingerprints": [
+        "C5:BA:21:79:CB:66:A6:D1:44:F7:FB:1B:0B:5E:56:4C:1F:B6:27:BF:01:E4:44:70:BB:34:5F:32:31:F6:3D:FF"
+      ]
+    }
   }
 ]
